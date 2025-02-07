@@ -120,6 +120,9 @@ The AI Therapist chatbot is powered by a fine-tuned T5 transformer model, enabli
 ### **3️⃣ Checkpoint-Based Training and Performance**
 
 - **Resuming Training:** Checkpoint-based training was implemented to ensure training progress could be saved and resumed, enhancing training stability and efficiency.
+- **Model Checkpoints:** The fine-tuned T5 model checkpoints from the 2nd epoch are large files and are available via these Google Drive links:
+    - [Link to Model](https://drive.google.com/drive/folders/1sC4fd5_cjjhVI9yPCb6JCL_UuQbrb-q4?usp=sharing)
+    
 - **Best ROUGE-1 Score:** The fine-tuned T5 model achieved a **ROUGE-1 score of 0.41**. ROUGE-1 is a metric commonly used to evaluate the quality of text summarization and generation, with higher scores indicating better performance. A score of 0.41 suggests a reasonable level of text generation quality for the AI therapist.
 - **Empathetic Response Generation:** The fine-tuned T5 model is capable of generating **empathetic and context-aware responses** to user queries. This allows the chatbot to provide more human-like and supportive interactions, crucial for a mental health support application.
 
@@ -157,22 +160,27 @@ This project provides a valuable tool for preliminary mental health assessment a
 ---
 
 
-## **🛠️ Project Structure**  
+## **🛠️ Project Structure**
 
 ```bash
-📦 Mental Health Prediction  
-├── 📂 model_folder/                  # Trained ML models  
-│   ├── network.zip                   # TabNet model for professionals  
-│   ├── model_params.json               # TabNet model for professionals 
-├── 📜 EDA_and_feature_engineering.ipynb # Exploratory Data Analysis  
-├── 📜 LLM Experimentation Report.pdf   # LLM training insights  
-├── 📜 T5_LLM_Experimentation.ipynb     # Fine-tuning experiments  
-├── 📜 data_preprocessing.ipynb         # Data cleaning & transformation  
-├── 📜 predict_mental_health.ipynb      # Model inference for mental health prediction  
-├── 📜 mental_health_ui.py              # Streamlit web application  
-├── 📜 pipeline.py                      # Preprocessing pipeline implementation  
-├── 📜 X.csv                            # Dataset for fine-tuning LLM  
-├── 📜 student_mental.csv               # Student dataset  
-├── 📜 professional_mental.csv          # Professional dataset  
-└── 📜 requirements.txt                 # Dependencies
-
+📦 Mental Health Prediction
+├── 📂 model_folder/                     # Trained ML models
+│   ├── network.zip                     # TabNet model for professionals
+│   ├── model_params.json               # TabNet model parameters
+├── 📜 EDA_and_feature_engineering.ipynb # Exploratory Data Analysis
+├── 📜 LLM Experimentation Report.pdf     # LLM training insights
+├── 📜 README.md                          # Project README file
+├── 📜 T5_LLM_Experimentation.ipynb       # Fine-tuning experiments for T5 LLM
+├── 📜 X.csv                              # Dataset for pipeline scaling 
+├── 📜 custom_encoder.py                  # Custom data encoder script
+├── 📜 data_preprocessing.ipynb           # Data preprocessing and pipeline creation
+├── 📜 mental_health_ui.py                # Streamlit web application code
+├── 📜 pipeline.py                        # Pipeline implementation script
+├── 📜 pipeline_professional.pkl          # pkl file of pipeline for professionals
+├── 📜 pipeline_student.pkl               # pkl file of pipeline for students
+├── 📜 predict-mental-health_2.ipynb      # Model inference notebook (version 2)
+├── 📜 predict_mental_health.ipynb        # Model inference notebook (version 1)
+├── 📜 professional_mental.csv            # Professional mental health dataset
+├── 📜 student_mental.csv                 # Student mental health dataset
+├── 📜 train_imp.csv                      # Imputed training dataset
+└── 📜 xgboost_model.pkl                  # XGBoost model for students
