@@ -98,37 +98,6 @@ EDA was conducted to identify key patterns and correlations in mental health con
 
 ## 🚀 How to Run the Project  
 
-### 🔧 Installation  
-
-#### 1️⃣ Clone the repository  
-```bash
-git clone https://github.com/yourusername/mental-health-predictor.git
-cd mental-health-predictor
-```bash
-
-## 🔍 Usage  
-
-### 📌 Depression Risk Prediction  
-1. **Select User Type** (Professional or Student)  
-2. **Input personal & lifestyle information**  
-3. **Get Depression Risk Assessment**  
-
-### 📌 AI Therapist Chatbot  
-1. **Enter mental health-related queries**  
-2. **Receive AI-generated empathetic responses**  
-
----
-```bash
-## 🚀 How to Run the Project  
-
-### 🔧 Installation  
-
-#### 1️⃣ Clone the repository
- 
-```bash
-git clone https://github.com/yourusername/mental-health-predictor.git
-cd mental-health-predictor
-
 ## 🔍 Usage  
 
 ### 📌 Depression Risk Prediction  
@@ -152,18 +121,13 @@ cd mental-health-predictor
 ---
 
 
-
-
 ## **🛠️ Project Structure**  
 
 ```bash
 📦 Mental Health Prediction  
 ├── 📂 model_folder/                  # Trained ML models  
 │   ├── network.zip                   # TabNet model for professionals  
-│   ├── xgboost_model.pkl              # XGBoost model for students  
-│   ├── pipeline_professional.pkl      # Preprocessing pipeline (professionals)  
-│   ├── pipeline_student.pkl           # Preprocessing pipeline (students)  
-├── 📂 fine_tuned_t5/                  # AI Therapist LLM model  
+│   ├── model_params.json               # TabNet model for professionals 
 ├── 📜 EDA_and_feature_engineering.ipynb # Exploratory Data Analysis  
 ├── 📜 LLM Experimentation Report.pdf   # LLM training insights  
 ├── 📜 T5_LLM_Experimentation.ipynb     # Fine-tuning experiments  
