@@ -61,6 +61,99 @@ EDA was conducted to identify key patterns and correlations in mental health con
 
 ---
 
+##  Machine Learning Models  
+
+### 1️⃣ Student Model: XGBoost (`xgboost_model.pkl`)  
+- **Algorithm:** Gradient Boosting Decision Trees  
+- **Achieved Accuracy:** 85%  
+- **Key Features:** Academic Pressure, CGPA, Study Satisfaction, Financial Stress, Sleep Duration  
+
+### 2️⃣ Professional Model: TabNet (`network.zip`)  
+- **Algorithm:** Deep Learning-based TabNet classifier  
+- **Achieved Accuracy:** 96%  
+- **Key Features:** Work Pressure, Job Satisfaction, Financial Stress, Sleep Duration  
+
+---
+
+## 🤖 AI Therapist (Fine-Tuned T5 Model)  
+
+### 1️⃣ Dataset & Training  
+- **Dataset:** `X.csv` containing user queries and professional therapist responses  
+- **Preprocessing:** Tokenized using Hugging Face **AutoTokenizer**  
+
+### 2️⃣ Fine-Tuning Process (`T5_LLM_Experimentation.ipynb`)  
+- **Model:** `google/t5-base`  
+- **Training Configuration:**  
+  - **Epochs:** 2  
+  - **Batch Size:** 24  
+  - **Learning Rate:** 1e-3  
+  - **Weight Decay:** 0.01  
+
+### 3️⃣ Resuming Training  
+- Used **checkpoint-based training** for consistency  
+- **Best ROUGE-1 Score:** 0.41  
+- Model generates **empathetic, context-aware responses**  
+
+---
+
+## 🚀 How to Run the Project  
+
+### 🔧 Installation  
+
+#### 1️⃣ Clone the repository  
+```bash
+git clone https://github.com/yourusername/mental-health-predictor.git
+cd mental-health-predictor
+```bash
+
+## 🔍 Usage  
+
+### 📌 Depression Risk Prediction  
+1. **Select User Type** (Professional or Student)  
+2. **Input personal & lifestyle information**  
+3. **Get Depression Risk Assessment**  
+
+### 📌 AI Therapist Chatbot  
+1. **Enter mental health-related queries**  
+2. **Receive AI-generated empathetic responses**  
+
+---
+```bash
+## 🚀 How to Run the Project  
+
+### 🔧 Installation  
+
+#### 1️⃣ Clone the repository
+ 
+```bash
+git clone https://github.com/yourusername/mental-health-predictor.git
+cd mental-health-predictor
+
+## 🔍 Usage  
+
+### 📌 Depression Risk Prediction  
+1. **Select User Type** (Professional or Student)  
+2. **Input personal & lifestyle information**  
+3. **Get Depression Risk Assessment**  
+
+### 📌 AI Therapist Chatbot  
+1. **Enter mental health-related queries**  
+2. **Receive AI-generated empathetic responses**  
+
+---
+## 📊 Model Performance  
+
+| Model     | Dataset       | Accuracy | Key Features |
+|-----------|--------------|----------|--------------|
+| **TabNet**  | Professionals | 96%      | Work Pressure, Job Satisfaction, Financial Stress |
+| **XGBoost** | Students      | 85%      | Academic Pressure, CGPA, Sleep Duration |
+| **T5 LLM**  | AI Therapist  | ROUGE-1: 0.41 | Fine-tuned for therapy |
+
+---
+
+
+
+
 ## **🛠️ Project Structure**  
 
 ```bash
@@ -81,4 +174,5 @@ EDA was conducted to identify key patterns and correlations in mental health con
 ├── 📜 X.csv                            # Dataset for fine-tuning LLM  
 ├── 📜 student_mental.csv               # Student dataset  
 ├── 📜 professional_mental.csv          # Professional dataset  
-└── 📜 requirements.txt                 # Dependencies  
+└── 📜 requirements.txt                 # Dependencies
+
